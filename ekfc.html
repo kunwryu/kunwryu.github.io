@@ -1,247 +1,159 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encyclopedia of Korean Folk Culture | Kun Wook Ryu</title>
-    <meta name="description" content="Overview of the Encyclopedia of Korean Folk Culture (EKFC) compilation and curation project by Kun Wook Ryu.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encyclopedia of Korean Folk Culture | Kun Wook Ryu</title>
+  <meta name="description" content="Encyclopedia of Korean Folk Culture (EKFC) research project by Kun Wook Ryu." />
 
-        <!-- ============================================================
-         CRAWLER_SHIELD: 14종 AI 학습 봇 차단 (공공 검색 색인은 허용)
-    ============================================================ -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="GPTBot" content="noindex, nofollow" />
-    <meta name="OAI-SearchBot" content="noindex, nofollow" />
-    <meta name="ClaudeBot" content="noindex, nofollow" />
-    <meta name="anthropic-ai" content="noindex, nofollow" />
-    <meta name="Claude-Web" content="noindex, nofollow" />
-    <meta name="Google-Extended" content="noindex, nofollow" />
-    <meta name="Googlebot-AI" content="noindex, nofollow" />
-    <meta name="Applebot-Extended" content="noindex, nofollow" />
-    <meta name="Amazonbot" content="noindex, nofollow" />
-    <meta name="Bytespider" content="noindex, nofollow" />
-    <meta name="CCBot" content="noindex, nofollow" />
-    <meta name="meta-externalagent" content="noindex, nofollow" />
-    <meta name="FacebookBot" content="noindex, nofollow" />
-    <meta http-equiv="X-Robots-Tag" content="noimageai, noai" />
-    
-    <!-- OpenGraph Metadata -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Encyclopedia of Korean Folk Culture | Kun Wook Ryu">
-    <meta property="og:description" content="A comprehensive, multi-volume compendium documenting Korea's rich folk heritage.">
-    <meta property="og:url" content="https://kunwryu.github.io/ekfc.html">
-    <meta property="og:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
+  <!-- ============================================================
+       CRAWLER_SHIELD: 14 AI Training Bots Blocked (Search Indexing Allowed)
+  ============================================================ -->
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="GPTBot" content="noindex, nofollow" />
+  <meta name="OAI-SearchBot" content="noindex, nofollow" />
+  <meta name="ClaudeBot" content="noindex, nofollow" />
+  <meta name="anthropic-ai" content="noindex, nofollow" />
+  <meta name="Claude-Web" content="noindex, nofollow" />
+  <meta name="Google-Extended" content="noindex, nofollow" />
+  <meta name="Googlebot-AI" content="noindex, nofollow" />
+  <meta name="Applebot-Extended" content="noindex, nofollow" />
+  <meta name="Amazonbot" content="noindex, nofollow" />
+  <meta name="Bytespider" content="noindex, nofollow" />
+  <meta name="CCBot" content="noindex, nofollow" />
+  <meta name="meta-externalagent" content="noindex, nofollow" />
+  <meta name="FacebookBot" content="noindex, nofollow" />
+  <meta http-equiv="X-Robots-Tag" content="noimageai, noai" />
 
-    <!-- Twitter Card Metadata -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Encyclopedia of Korean Folk Culture | Kun Wook Ryu">
-    <meta name="twitter:description" content="A comprehensive, multi-volume compendium documenting Korea's rich folk heritage.">
-    <meta name="twitter:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Encyclopedia of Korean Folk Culture | Kun Wook Ryu" />
+  <meta property="og:description" content="Encyclopedia of Korean Folk Culture (EKFC) research project by Kun Wook Ryu." />
+  <meta property="og:url" content="https://kunwryu.github.io/ekfc.html" />
+  <meta property="og:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,ital,wght@6..72,0,400;6..72,1,400&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --surface-color: #ffffff;
-            --text-main: #53565a;
-            --text-dark: #1a1a1a;
-            --accent-color: #009ccf;
-            --accent-hover: #007da6;
-            --accent-light: #78d4f7;
-            --accent-mint: #b4fdc0;
-            --border-color: #e2e4e6;
-            --card-shadow: 0 4px 20px rgba(83, 86, 90, 0.08);
-            --transition-speed: 0.3s;
-            --max-width: 960px;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-            /* Keeps page width and container alignment identical across all pages */
-            overflow-y: scroll;
-            scrollbar-gutter: stable;
-        }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-
-        h1, h2, h3, .brand { font-family: 'Cinzel', serif; color: var(--text-main); font-weight: 700; }
-        p, li { font-family: 'Newsreader', serif; font-size: 1.125rem; color: var(--text-main); }
-        a { color: var(--accent-color); text-decoration: none; transition: color var(--transition-speed) ease; }
-        a:hover { color: var(--accent-hover); }
-
-        .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--accent-color); color: #ffffff; padding: 0.5rem 1rem; z-index: 2000; font-family: 'Inter', sans-serif; font-weight: 600; border-radius: 4px; transition: top 0.2s ease; }
-        .skip-link:focus { top: 1rem; }
-
-        a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-
-        @media (prefers-reduced-motion: reduce) {
-            .animate-fade-in { animation: none !important; }
-            * { transition: none !important; scroll-behavior: auto !important; }
-        }
-
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
-        section { padding: 3.5rem 0 2.5rem 0; border-bottom: 1px solid var(--border-color); }
-        section:last-of-type { border-bottom: none; }
-
-        .section-title { font-size: 2rem; margin-bottom: 1rem; }
-        .page-desc { font-family: 'Newsreader', serif; font-size: 1.25rem; color: var(--text-main); opacity: 0.9; margin-bottom: 2rem; }
-
-        header { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 1000; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .brand { font-size: 1.35rem; letter-spacing: 0.5px; color: var(--text-main); }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--text-main); }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1100; }
-        .hamburger span { display: block; width: 24px; height: 2px; background-color: var(--text-main); margin: 5px 0; transition: all var(--transition-speed) ease; }
-
-        .project-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; background-color: rgba(120, 212, 247, 0.08); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem; }
-        .meta-item h4 { font-family: 'Inter', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-color); margin-bottom: 0.25rem; }
-        .meta-item p { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 500; }
-
-        .timeline-box { position: relative; border-left: 3px solid var(--accent-light); padding-left: 1.5rem; margin-left: 0.5rem; }
-        .timeline-entry { position: relative; margin-bottom: 2rem; }
-        .timeline-entry::before { content: ''; position: absolute; left: -1.95rem; top: 0.35rem; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent-color); border: 3px solid #ffffff; }
-        .timeline-entry h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
-        
-        /* CONTRAST FIX: #1a1a1a text on #b4fdc0 mint background */
-        .timeline-entry .year-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; background-color: var(--accent-mint); color: var(--text-dark); padding: 0.1rem 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; }
-
-        .btn-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: var(--accent-color); padding: 0.75rem 1.5rem; border: 1px solid var(--accent-color); border-radius: 6px; transition: all var(--transition-speed) ease; }
-        .btn-link:hover { background-color: var(--accent-color); color: #ffffff; }
-
-        footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border-color); background-color: var(--bg-color); }
-        footer p { font-family: 'Inter', sans-serif; font-size: 0.875rem; opacity: 0.8; }
-
-        @media (max-width: 768px) {
-            .hamburger { display: block; }
-            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-            .hamburger.active span:nth-child(2) { opacity: 0; }
-            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-            .nav-links { position: fixed; top: 70px; right: -100%; width: 100%; height: calc(100vh - 70px); background-color: var(--bg-color); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transition: right var(--transition-speed) ease; border-top: 1px solid var(--border-color); }
-            .nav-links.active { right: 0; }
-            .nav-links a { font-size: 1.25rem; }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Header (Subtitle removed) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Kun Wook Ryu Home">
+        <span class="brand-name">Kun Wook Ryu</span>
+      </a>
 
-    <header>
-        <div class="container header-content">
-            <a href="index.html" class="brand">Kun Wook Ryu</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="nav-item">Home</a></li>
-                <li><a href="cv.html" class="nav-item">CV</a></li>
-                <li><a href="research.html" class="nav-item active">Research & Works</a></li>
-            </ul>
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" >Home</a></li>
+          <li><a href="cv.html" class="nav-link" >CV</a></li>
+          <li><a href="research.html" class="nav-link" aria-current="page">Research & Works</a></li>
+          <li><a href="press.html" class="nav-link" >Press Releases</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="btn-theme" aria-label="Toggle light and dark theme">
+          <span id="theme-toggle-text">☀️ Light</span>
+        </button>
+        <button id="hamburger-btn" class="btn-hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="brand-name" style="font-size: 1.2rem;">Kun Wook Ryu</span>
+      <button id="drawer-close-btn" class="drawer-close" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" >Home</a></li>
+      <li><a href="cv.html" class="mobile-nav-link" >CV</a></li>
+      <li><a href="research.html" class="mobile-nav-link" aria-current="page">Research & Works</a></li>
+      <li><a href="press.html" class="mobile-nav-link" >Press Releases</a></li>
+    </ul>
+  </aside>
+
+  <main id="main-content" class="container">
+    <section>
+      <div class="section-header">
+        <h1 class="section-title">Encyclopedia of Korean Folk Culture</h1>
+      </div>
+
+      <article class="card" style="margin-bottom: 2.5rem;">
+        <div class="card-meta">
+          <span class="badge">Project Period: 2016. 10. 4. &ndash; 2022. 4. 24.</span>
+          <span class="badge badge-mint">Role: Curator (Research Assistant)</span>
+          <span class="badge">Institution: National Folk Museum of Korea</span>
         </div>
-    </header>
+        <h2 class="card-title" style="font-size: 1.5rem; margin-top: 0.5rem;">Project Overview</h2>
+        <p class="card-desc" style="font-size: 1.15rem; line-height: 1.85;">
+          The <strong>Encyclopedia of Korean Folk Culture (EKFC)</strong> is a comprehensive, multi-volume, multilingual compendium documenting Korea's rich folk heritage, including seasonal customs, beliefs, literature, rites of passage, traditional arts, and daily livelihood systems.
+        </p>
+        <p class="card-desc" style="font-size: 1.15rem; line-height: 1.85;">
+          From October 2016 to April 2022, I contributed to manuscript proofreading, copy-editing, multimedia metadata archiving, civil inquiry management, and supporting multilingual publication initiatives connecting Korean folk scholarship with global academic communities.
+        </p>
+      </article>
 
-    <main class="container animate-fade-in" id="main-content">
-        <section>
-            <h1 class="section-title">Encyclopedia of Korean Folk Culture</h1>
-            <p class="page-desc">
-                The Encyclopedia of Korean Folk Culture (EKFC) is a multi-volume, multilingual compendium documenting Korea's folk heritage, seasonal customs, beliefs, literature, rites of passage, traditional arts, and daily life practices.
+      <div class="cv-block">
+        <h2 class="cv-block-title">Volumes & Published Works</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3 class="card-title">Livelihood Systems: Fishery (2021)</h3>
+            <p class="card-desc">
+              Authored entries on <a href="https://folkency.nfm.go.kr/topic/detail/9250" target="_blank" rel="noopener noreferrer">나침반 [Compass]</a> and <a href="https://folkency.nfm.go.kr/topic/detail/9269" target="_blank" rel="noopener noreferrer">노량진수산시장 [Noryangjin Fisheries Wholesale Market]</a>.
             </p>
+          </div>
 
-            <div class="project-meta">
-                <div class="meta-item">
-                    <h4>Role</h4>
-                    <p>Research Assistant & Curator</p>
-                </div>
-                <div class="meta-item">
-                    <h4>Period</h4>
-                    <p>2016 – 2022</p>
-                </div>
-                <div class="meta-item">
-                    <h4>Scope</h4>
-                    <p>Compilation, Translation & Digital Indexing</p>
-                </div>
-                <div class="meta-item">
-                    <h4>Mirror</h4>
-                    <p><a href="https://kunwryu.wordpress.com/portfolio/ekfc/" target="_blank">WordPress Source &rarr;</a></p>
-                </div>
-            </div>
+          <div class="card">
+            <h3 class="card-title">Folk Symbols: Tiger (2021)</h3>
+            <p class="card-desc">
+              Authored entry on <a href="https://folkency.nfm.go.kr/topic/detail/9148" target="_blank" rel="noopener noreferrer">호자 [Hoja / Tiger Vessel]</a>, examining historical material culture and terminology.
+            </p>
+          </div>
 
-            <div style="margin-bottom: 2rem;">
-                <a href="ekfc-entries.html" class="btn-link">View Authored EKFC Entries &rarr;</a>
-            </div>
-        </section>
-
-        <!-- PROJECT TIMELINE / VOLUMES -->
-        <section>
-            <h2 class="section-title" style="font-size: 1.6rem;">Project Multi-Volume Scope</h2>
-            
-            <div class="timeline-box">
-                <div class="timeline-entry">
-                    <span class="year-badge">Basic Necessities (2017–2019)</span>
-                    <h3>Clothing, Food, & Housing</h3>
-                    <p>Comprehensive curation covering traditional attire (Hanbok), culinary traditions, and vernacular architecture (Hanok).</p>
-                </div>
-
-                <div class="timeline-entry">
-                    <span class="year-badge">Arts & Performances (2015–2016)</span>
-                    <h3>Folk Dramas, Music, Nongak & Dance</h3>
-                    <p>Documentation of community band music, mask dances, folk paintings, and performing arts traditions.</p>
-                </div>
-
-                <div class="timeline-entry">
-                    <span class="year-badge">Rites of Passage (2014)</span>
-                    <h3>Life Cycle Rituals</h3>
-                    <p>Framing traditional milestones including birth, coming-of-age, wedding ceremonies, funerals, and ancestral rites.</p>
-                </div>
-
-                <div class="timeline-entry">
-                    <span class="year-badge">Folk Literature (2012–2013)</span>
-                    <h3>Folktales, Songs & Pansori</h3>
-                    <p>Cataloguing oral literature, epic chants, folk songs, and narrative storytelling traditions.</p>
-                </div>
-
-                <div class="timeline-entry">
-                    <span class="year-badge">Folk Beliefs (2009–2011)</span>
-                    <h3>Shamanism, Communal & Household Religion</h3>
-                    <p>Documenting sacred practices, village rituals, tutelary deities, and domestic worship practices.</p>
-                </div>
-
-                <div class="timeline-entry">
-                    <span class="year-badge">Seasonal Customs (2004–2006)</span>
-                    <h3>Korean Seasonal Customs</h3>
-                    <p>Structuring cyclical agricultural rituals, seasonal festivals, and month-by-month traditional observances.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; Kun Wook Ryu. All rights reserved.</p>
+          <div class="card">
+            <h3 class="card-title">Basic Necessities: Food (2018)</h3>
+            <p class="card-desc">
+              Authored entries on <a href="https://folkency.nfm.go.kr/topic/detail/7385" target="_blank" rel="noopener noreferrer">국자 [Ladle]</a>, <a href="https://folkency.nfm.go.kr/topic/detail/7667" target="_blank" rel="noopener noreferrer">병 [Bottle]</a>, <a href="https://folkency.nfm.go.kr/topic/detail/7787" target="_blank" rel="noopener noreferrer">수박 [Watermelon]</a>, and <a href="https://folkency.nfm.go.kr/topic/detail/8104" target="_blank" rel="noopener noreferrer">칼 [Kitchen Knife]</a>.
+            </p>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            const isExpanded = hamburger.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', isExpanded);
-        });
-    </script>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="research.html#projects" class="btn-primary">&larr; Return to Research & Works</a>
+        <a href="cv.html" class="btn-link">View Full CV &rarr;</a>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copyright">
+        &copy; 2026 Kun Wook Ryu. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html" class="footer-link">Home</a></li>
+        <li><a href="cv.html" class="footer-link">CV</a></li>
+        <li><a href="research.html" class="footer-link">Research & Works</a></li>
+        <li><a href="press.html" class="footer-link">Press Releases</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Floating TOP Button -->
+  <a href="#top" class="back-to-top" aria-label="Scroll to top of page" title="Top of page">🔝 TOP</a>
+
+  <script src="main.js"></script>
 </body>
 </html>
