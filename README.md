@@ -47,6 +47,8 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 
 ---
 
+---
+
 ## 📩 Contact
 
 For academic discussions, research collaborations, or inquiries:
