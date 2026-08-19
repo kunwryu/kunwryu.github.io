@@ -21,11 +21,6 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 * **Media & Digital Culture:** Subcultures, creative labor, and participatory culture.
 * **Korean Folk Culture & Ethnography:** Contributions to the *Encyclopedia of Korean Folk Culture (EKFC)*.
 
-### 🌐 Academic & Online Profiles
-* 🔬 **ResearchGate:** [Kun Wook Ryu](https://www.researchgate.net/profile/Kun-Wook-Ryu)
-* 📚 **Academia.edu:** [Kun Wook Ryu](https://aks.academia.edu/KunWookRyu)
-* 🪪 **Gravatar Profile:** [gravatar.com/kunwryu](https://gravatar.com/kunwryu)
-
 ---
 
 ## 📁 Repository Structure
