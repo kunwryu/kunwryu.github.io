@@ -18,7 +18,7 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 ### 🔬 Core Research Interests
 * **Cultural Heritage & Digital Heritage:** Community safeguarding, digital transformation, and heritage policies.
 * **Built Environments & Cultural Landscapes:** Spatial anthropology, places of memory, and landscape hermeneutics.
-* **Media & Digital Culture:** Subcultures, creative labor, and participatory culture.
+* **Media & Digital Culture:** Subcultures, creative labour, and participatory culture.
 * **Korean Folk Culture & Ethnography:** Contributions to the *Encyclopedia of Korean Folk Culture (EKFC)*.
 
 ---
