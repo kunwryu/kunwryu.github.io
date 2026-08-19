@@ -44,8 +44,7 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 │   │   └── main.js     # Accessible navigation toggle and UI interactions
 │   └── images/         # OpenGraph preview cards, icons, and favicons
 └── README.md           # Repository documentation
-
----
+```
 
 ---
 
