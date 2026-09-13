@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="ko-KR">
+  <info>
+    <title>한국문화인류학회 - 『한국문화인류학』 (Korean Journal of Cultural Anthropology)</title>
+    <title-short>한국문화인류학</title-short>
+    <id>http://www.zotero.org/styles/korean-journal-of-cultural-anthropology</id>
+    <link href="http://www.zotero.org/styles/korean-journal-of-cultural-anthropology" rel="self"/>
+    <link href="http://www.zotero.org/styles/american-anthropological-association" rel="template"/>
+    <category citation-format="author-date"/>
+    <category field="anthropology"/>
+    <summary>한국문화인류학회 『한국문화인류학』 원고 작성 지침에 맞춘 CSL 스타일 (쉼표 구분자, 큰따옴표, 신문 및 웹자료 특수 서식 반영)</summary>
+    <updated>2026-09-08T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+
+  <!-- 다국어 용어 설정 -->
+  <locale xml:lang="ko">
+    <terms>
+      <term name="et-al">외</term>
+      <term name="editor" form="short">편</term>
+      <term name="editor" form="verb-short">엮음</term>
+      <term name="translator" form="short">역</term>
+      <term name="page" form="short">pp.</term>
+      <term name="in"></term>
+      <term name="accessed">접속</term>
+      <term name="open-quote">"</term>
+      <term name="close-quote">"</term>
+    </terms>
+  </locale>
+
+  <locale xml:lang="en">
+    <terms>
+      <term name="et-al">et al.</term>
+      <term name="editor" form="short">
+        <single>ed.</single>
+        <multiple>eds.</multiple>
+      </term>
+      <term name="editor" form="verb-short">
+        <single>ed.</single>
+        <multiple>eds.</multiple>
+      </term>
+      <term name="translator" form="short">trans.</term>
+      <term name="page" form="short">pp.</term>
+      <term name="in">in</term>
+      <term name="accessed">accessed</term>
+      <term name="open-quote">"</term>
+      <term name="close-quote">"</term>
+    </terms>
+  </locale>
+
+  <locale xml:lang="ja">
+    <terms>
+      <term name="et-al">他</term>
+      <term name="editor" form="short">編</term>
+      <term name="editor" form="verb-short">編</term>
+      <term name="translator" form="short">訳</term>
+      <term name="page" form="short">pp.</term>
+      <term name="in"></term>
+      <term name="accessed">閲覧</term>
+      <term name="open-quote">"</term>
+      <term name="close-quote">"</term>
+    </terms>
+  </locale>
+
+  <locale xml:lang="zh">
+    <terms>
+      <term name="et-al">等</term>
+      <term name="editor" form="short">编</term>
+      <term name="editor" form="verb-short">编</term>
+      <term name="translator" form="short">译</term>
+      <term name="page" form="short">pp.</term>
+      <term name="in"></term>
+      <term name="accessed">访问</term>
+      <term name="open-quote">"</term>
+      <term name="close-quote">"</term>
+    </terms>
+  </locale>
+
+  <!-- MACROS -->
+  <macro name="contributors">
+    <choose>
+      <if type="motion_picture" match="none">
+        <names variable="author">
+          <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
+          <label form="short" prefix=" (" suffix=")"/>
+          <substitute>
+            <names variable="editor">
+              <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
+              <label form="short" prefix=" (" suffix=")"/>
+            </names>
+            <names variable="translator">
+              <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
+              <label form="short" prefix=" (" suffix=")"/>
+            </names>
+            <text macro="title"/>
+          </substitute>
+        </names>
+      </if>
+      <else>
+        <choose>
+          <if match="any" locale="en">
+            <names variable="author">
+              <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual" suffix=", dir."/>
+              <label form="short" prefix=" (" suffix=")"/>
+              <substitute>
+                <text macro="title"/>
+              </substitute>
+            </names>
+          </if>
+          <else>
+            <names variable="author">
+              <name name-as-sort-order="first" sort-separator=", " delimiter="·" delimiter-precedes-last="never" suffix=" 연출"/>
+              <label form="short" prefix=" (" suffix=")"/>
+              <substitute>
+                <text macro="title"/>
+              </substitute>
+            </names>
+          </else>
+        </choose>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="contributors-short">
+    <choose>
+      <if match="any" locale="en">
+        <names variable="author">
+          <name form="short" and="symbol" delimiter=", "/>
+          <substitute>
+            <names variable="editor">
+              <name form="short" and="symbol" delimiter=", "/>
+            </names>
+            <names variable="translator">
+              <name form="short" and="symbol" delimiter=", "/>
+            </names>
+            <text macro="title"/>
+          </substitute>
+        </names>
+      </if>
+      <else>
+        <names variable="author">
+          <name form="short" delimiter="·"/>
+          <substitute>
+            <names variable="editor">
+              <name form="short" delimiter="·"/>
+            </names>
+            <names variable="translator">
+              <name form="short" delimiter="·"/>
+            </names>
+            <text macro="title"/>
+          </substitute>
+        </names>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="secondary-contributors">
+    <choose>
+      <if type="chapter paper-conference" match="none">
+        <names variable="translator" prefix="(" suffix=")">
+          <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
+          <label form="short" prefix=" "/>
+        </names>
+      </if>
+    </choose>
+  </macro>
+
+  <macro name="container-contributors">
+    <choose>
+      <if type="chapter paper-conference" match="any">
+        <group delimiter=" ">
+          <text term="in" text-case="lowercase"/>
+          <names variable="editor">
+            <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
+            <label form="short" prefix=" (" suffix=")"/>
+          </names>
+        </group>
+      </if>
+    </choose>
+  </macro>
+
+  <macro name="edition">
+    <choose>
+      <if is-numeric="edition">
+        <group delimiter=" ">
+          <number variable="edition" form="ordinal"/>
+          <text term="edition" form="short"/>
+        </group>
+      </if>
+      <else>
+        <text variable="edition"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="title">
+    <choose>
+      <if type="article-journal article-magazine article-newspaper chapter paper-conference thesis manuscript webpage post post-weblog" match="any">
+        <text variable="title" quotes="true"/>
+      </if>
+      <else>
+        <choose>
+          <if match="any" locale="en">
+            <text variable="title" font-style="italic"/>
+          </if>
+          <else>
+            <text variable="title" prefix="『" suffix="』"/>
+          </else>
+        </choose>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="container-title">
+    <choose>
+      <if type="chapter paper-conference" match="any">
+        <choose>
+          <if match="any" locale="en">
+            <text variable="container-title" font-style="italic"/>
+          </if>
+          <else>
+            <text variable="container-title" prefix="『" suffix="』"/>
+          </else>
+        </choose>
+      </if>
+      <else-if type="article-journal article-magazine article-newspaper" match="any">
+        <choose>
+          <if match="any" locale="en">
+            <text variable="container-title" font-style="italic"/>
+          </if>
+          <else>
+            <text variable="container-title" prefix="『" suffix="』"/>
+          </else>
+        </choose>
+      </else-if>
+    </choose>
+  </macro>
+
+  <macro name="container-prefix">
+    <choose>
+      <if match="any" locale="en">
+        <text term="in" text-case="lowercase"/>
+      </if>
+    </choose>
+  </macro>
+
+  <macro name="publisher">
+    <choose>
+      <if type="thesis manuscript" match="any">
+        <group delimiter=" ">
+          <text variable="publisher"/>
+          <text variable="genre"/>
+        </group>
+      </if>
+      <else>
+        <group delimiter=": ">
+          <text variable="publisher-place"/>
+          <text variable="publisher"/>
+        </group>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="date-reference">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text term="no date" form="short"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="date-bibliography">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text term="no date" form="short"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="locators-journal">
+    <choose>
+      <if type="article-journal">
+        <text variable="volume" prefix=" "/>
+        <text variable="issue" prefix="(" suffix=")"/>
+        <text variable="page" prefix=": "/>
+      </if>
+    </choose>
+  </macro>
+
+  <macro name="locators-chapter">
+    <choose>
+      <if type="chapter paper-conference" match="any">
+        <group prefix="pp.">
+          <text variable="page"/>
+        </group>
+      </if>
+    </choose>
+  </macro>
+
+  <macro name="point-locators">
+    <text variable="locator"/>
+  </macro>
+
+  <macro name="access">
+    <choose>
+      <if variable="URL">
+        <group delimiter=" ">
+          <text variable="URL"/>
+          <group prefix="(" suffix=")">
+            <date variable="accessed">
+              <date-part name="year"/>
+              <date-part name="month" prefix=". "/>
+              <date-part name="day" prefix=". " suffix="."/>
+            </date>
+            <text term="accessed" prefix=" "/>
+          </group>
+        </group>
+      </if>
+    </choose>
+  </macro>
+
+  <!-- IN-TEXT CITATION -->
+  <citation et-al-min="4" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true">
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=": ">
+        <group delimiter=" ">
+          <text macro="contributors-short"/>
+          <text macro="date-reference"/>
+        </group>
+        <text macro="point-locators"/>
+      </group>
+    </layout>
+  </citation>
+
+  <!-- BIBLIOGRAPHY -->
+  <bibliography et-al-min="10" et-al-use-first="10" subsequent-author-substitute="________" entry-spacing="0">
+    <sort>
+      <key macro="contributors"/>
+      <key variable="issued"/>
+    </sort>
+    <layout suffix=".">
+      <choose>
+        <!-- 1. 신문 및 잡지 기사 (Newspaper & Magazine) -->
+        <if type="article-newspaper article-magazine" match="any">
+          <group delimiter=", ">
+            <text macro="container-title"/>
+            <choose>
+              <if variable="title">
+                <group delimiter=" ">
+                  <text macro="title"/>
+                  <names variable="author" prefix="(" suffix=")">
+                    <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
+                  </names>
+                </group>
+              </if>
+            </choose>
+            <date variable="issued" suffix="일자">
+              <date-part name="year"/>
+              <date-part name="month" prefix=". "/>
+              <date-part name="day" prefix=". "/>
+            </date>
+            <choose>
+              <if variable="page">
+                <text variable="page" prefix="pp."/>
+              </if>
+            </choose>
+            <text macro="access"/>
+          </group>
+        </if>
+
+        <!-- 2. 웹페이지 및 온라인 자료 (Webpage & Online Posts) -->
+        <else-if type="webpage post post-weblog dataset" match="any">
+          <group delimiter=", ">
+            <text macro="contributors"/>
+            <choose>
+              <if variable="issued">
+                <text macro="date-bibliography"/>
+              </if>
+            </choose>
+            <text macro="title"/>
+            <text macro="access"/>
+          </group>
+        </else-if>
+
+        <!-- 3. 단행본, 학술지 논문, 챕터/편저 등 일반 학술 자료 -->
+        <else>
+          <group delimiter=", ">
+            <group delimiter=" ">
+              <text macro="contributors"/>
+              <text macro="secondary-contributors"/>
+            </group>
+            <text macro="date-bibliography"/>
+            <text macro="title"/>
+            <text macro="container-contributors"/>
+            <group>
+              <text macro="container-title"/>
+              <text macro="locators-journal"/>
+            </group>
+            <text macro="edition"/>
+            <text macro="publisher"/>
+            <text macro="locators-chapter"/>
+          </group>
+          <choose>
+            <if type="article-journal" match="none">
+              <text macro="access" prefix=", "/>
+            </if>
+          </choose>
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
