@@ -1,0 +1,43 @@
+MIT License (for Code & Design System)
+
+Copyright (c) 2026 Kun Wook Ryu (https://kunwryu.github.io/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+Academic Content, Personal Intellectual Property & Trademark Notice
+================================================================================
+1. Personal Academic Content & Identity:
+   All personal scholarship, academic curriculum vitae (CV), statements of
+   purpose, unpublished manuscripts, essays, research summaries, photographs,
+   and personal identity documents contained in this repository
+   ("Kun Wook Ryu | Academic Portfolio & Website", https://kunwryu.github.io/)
+   are the proprietary intellectual property of Kun Wook Ryu.
+   All Rights Reserved.
+   No reproduction, adaptation, republication, or commercial distribution of
+   these personal academic contents is permitted without explicit prior
+   written consent from the author, except for customary academic citation
+   and fair use purposes under applicable copyright laws.
+
+2. AI Governance & Data Mining (CRAWLER_SHIELD v2):
+   In accordance with ai.txt, robots.txt, and W3C TDM Reservation Protocol
+   (tdm-reservation: 1) specifications, automated web scraping, bulk extraction,
+   text/data mining, and data ingestion for the purpose of training commercial
+   generative AI or machine learning models without explicit prior written
+   authorization are strictly prohibited.
