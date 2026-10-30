@@ -80,21 +80,42 @@
   <macro name="contributors">
     <choose>
       <if type="motion_picture" match="none">
-        <names variable="author">
-          <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
-          <label form="short" prefix=" (" suffix=")"/>
-          <substitute>
-            <names variable="editor">
+        <choose>
+          <if match="any" locale="en">
+            <names variable="author">
               <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
               <label form="short" prefix=" (" suffix=")"/>
+              <substitute>
+                <names variable="editor">
+                  <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
+                  <label form="short" prefix=" (" suffix=")"/>
+                </names>
+                <names variable="translator">
+                  <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
+                  <label form="short" prefix=" (" suffix=")"/>
+                </names>
+                <text macro="title"/>
+              </substitute>
             </names>
-            <names variable="translator">
-              <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="contextual"/>
-              <label form="short" prefix=" (" suffix=")"/>
+          </if>
+          <else>
+            <names variable="author">
+              <name name-as-sort-order="all" sort-separator=", " delimiter="·" delimiter-precedes-last="never"/>
+              <label form="short" prefix=" "/>
+              <substitute>
+                <names variable="editor">
+                  <name name-as-sort-order="all" sort-separator=", " delimiter="·" delimiter-precedes-last="never"/>
+                  <label form="short" prefix=" "/>
+                </names>
+                <names variable="translator">
+                  <name name-as-sort-order="all" sort-separator=", " delimiter="·" delimiter-precedes-last="never"/>
+                  <label form="short" prefix=" "/>
+                </names>
+                <text macro="title"/>
+              </substitute>
             </names>
-            <text macro="title"/>
-          </substitute>
-        </names>
+          </else>
+        </choose>
       </if>
       <else>
         <choose>
@@ -125,13 +146,13 @@
     <choose>
       <if match="any" locale="en">
         <names variable="author">
-          <name form="short" and="symbol" delimiter=", "/>
+          <name form="short" and="text" delimiter=", "/>
           <substitute>
             <names variable="editor">
-              <name form="short" and="symbol" delimiter=", "/>
+              <name form="short" and="text" delimiter=", "/>
             </names>
             <names variable="translator">
-              <name form="short" and="symbol" delimiter=", "/>
+              <name form="short" and="text" delimiter=", "/>
             </names>
             <text macro="title"/>
           </substitute>
@@ -157,10 +178,20 @@
   <macro name="secondary-contributors">
     <choose>
       <if type="chapter paper-conference" match="none">
-        <names variable="translator" prefix="(" suffix=")">
-          <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
-          <label form="short" prefix=" "/>
-        </names>
+        <choose>
+          <if match="any" locale="en">
+            <names variable="translator" prefix="(" suffix=")">
+              <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
+              <label form="short" prefix=" "/>
+            </names>
+          </if>
+          <else>
+            <names variable="translator" prefix="(" suffix=")">
+              <name delimiter="·" delimiter-precedes-last="never"/>
+              <label form="short" prefix=" "/>
+            </names>
+          </else>
+        </choose>
       </if>
     </choose>
   </macro>
@@ -330,7 +361,7 @@
   </macro>
 
   <!-- IN-TEXT CITATION -->
-  <citation et-al-min="4" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true">
+  <citation et-al-min="4" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" collapse="year" cite-group-delimiter=", ">
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=": ">
         <group delimiter=" ">
@@ -343,7 +374,7 @@
   </citation>
 
   <!-- BIBLIOGRAPHY -->
-  <bibliography et-al-min="10" et-al-use-first="10" subsequent-author-substitute="________" entry-spacing="0">
+  <bibliography et-al-min="99" et-al-use-first="99" subsequent-author-substitute="________" entry-spacing="0">
     <sort>
       <key macro="contributors"/>
       <key variable="issued"/>
@@ -354,25 +385,72 @@
         <if type="article-newspaper article-magazine" match="any">
           <group delimiter=", ">
             <text macro="container-title"/>
+            <text macro="date-bibliography"/>
             <choose>
               <if variable="title">
                 <group delimiter=" ">
                   <text macro="title"/>
-                  <names variable="author" prefix="(" suffix=")">
-                    <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
-                  </names>
+                  <choose>
+                    <if variable="author">
+                      <choose>
+                        <if match="any" locale="en">
+                          <names variable="author" prefix="(" suffix=")">
+                            <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
+                          </names>
+                        </if>
+                        <else>
+                          <names variable="author" prefix="(" suffix=")">
+                            <name delimiter="·" delimiter-precedes-last="never"/>
+                          </names>
+                        </else>
+                      </choose>
+                    </if>
+                  </choose>
                 </group>
               </if>
             </choose>
-            <date variable="issued" suffix="일자">
-              <date-part name="year"/>
-              <date-part name="month" prefix=". "/>
-              <date-part name="day" prefix=". "/>
-            </date>
             <choose>
-              <if variable="page">
-                <text variable="page" prefix="pp."/>
+              <if match="any" locale="en">
+                <date variable="issued">
+                  <date-part name="month" form="long" suffix=" "/>
+                  <date-part name="day"/>
+                </date>
               </if>
+              <else>
+                <date variable="issued">
+                  <date-part name="month" suffix="월 "/>
+                  <date-part name="day" suffix="일자"/>
+                </date>
+              </else>
+            </choose>
+            <choose>
+              <if type="article-newspaper">
+                <choose>
+                  <if match="any" locale="en">
+                    <text variable="page" prefix="p."/>
+                  </if>
+                  <else>
+                    <choose>
+                      <if is-numeric="page">
+                        <text variable="page" suffix="면"/>
+                      </if>
+                      <else>
+                        <text variable="page"/>
+                      </else>
+                    </choose>
+                  </else>
+                </choose>
+              </if>
+              <else>
+                <choose>
+                  <if is-numeric="page">
+                    <text variable="page" prefix="pp."/>
+                  </if>
+                  <else>
+                    <text variable="page"/>
+                  </else>
+                </choose>
+              </else>
             </choose>
             <text macro="access"/>
           </group>
